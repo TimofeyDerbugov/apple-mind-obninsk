@@ -1,0 +1,14 @@
+# Фото из карточки организации на Яндекс Картах.
+# Формат: имя_файла адрес. Скачивает .github/workflows/fetch-photos.yml
+interior.jpg https://avatars.mds.yandex.net/get-altay/16021390/2a0000019ba6c97b70ade0e7335d7e401e51/XXXL
+facade.jpg https://avatars.mds.yandex.net/get-altay/16386092/2a0000019d763dc2913c3ebc0f303e30f0f9/XXXL
+facade-2.jpg https://avatars.mds.yandex.net/get-altay/16465668/2a0000019b0c45f1c8eff76bc293ef41a1a6/XXXL
+counter.jpg https://avatars.mds.yandex.net/get-altay/17750410/2a0000019ceca9217335eb5c5f96d6ef1e22/XXXL
+iphone-box.jpg https://avatars.mds.yandex.net/get-altay/15608211/2a00000197b0a5b3af264276dcbb605118b2/XXXL
+iphone-hand.jpg https://avatars.mds.yandex.net/get-altay/14246212/2a0000019b3876da817e99b76061b18bf4c9/XXXL
+macbook.jpg https://avatars.mds.yandex.net/get-altay/14635327/2a00000197b0a5a85b2c87e77d5a8f0417d9/XXXL
+airpods.jpg https://avatars.mds.yandex.net/get-altay/14675612/2a00000197b0a5a4666dddf59a5009fa18ad/XXXL
+accessories.jpg https://avatars.mds.yandex.net/get-altay/16399547/2a00000197b0a5aeaba1b14b882913d41f9b/XXXL
+iphone-white.jpg https://avatars.mds.yandex.net/get-altay/16378552/2a00000197b0a5b0295094a487ac16229562/XXXL
+camera.jpg https://avatars.mds.yandex.net/get-altay/13068443/2a00000197b0a5a74066cf7bb750c3fa444c/XXXL
+iphone-15.jpg https://avatars.mds.yandex.net/get-altay/16439251/2a0000019bf095adcf847975eab869197d2c/XXXL
