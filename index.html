@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="canonical" href="https://timofeyderbugov.github.io/apple-mind-obninsk/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -18,6 +18,7 @@
     <meta property="og:title" content="Apple Mind — техника и ремонт телефонов в Обнинске">
     <meta property="og:description" content="Магазин техники Apple, Samsung, Xiaomi, Huawei и сервис по ремонту телефонов. Обнинск, проспект Ленина, 150.">
     <meta property="og:url" content="https://timofeyderbugov.github.io/apple-mind-obninsk/">
+    <meta property="og:image" content="https://timofeyderbugov.github.io/apple-mind-obninsk/img/camera.jpg">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -41,23 +42,98 @@
 
     <main id="top">
 
-        <!-- Первый экран: заголовок + форма заявки -->
+        <!-- Первый экран -->
         <section class="hero">
             <div class="wrap hero__inner">
                 <div class="hero__text">
-                    <h1 class="hero__title">Техника Apple и&nbsp;ремонт телефонов в&nbsp;Обнинске</h1>
+                    <p class="hero__place">Обнинск, проспект Ленина, 150</p>
+                    <h1 class="hero__title">Техника Apple и&nbsp;ремонт телефонов</h1>
                     <p class="hero__lead">
-                        Магазин и сервис на проспекте Ленина, 150. Подберём iPhone, MacBook
-                        или AirPods, наклеим стекло, перенесём данные и всё настроим прямо в магазине.
+                        Подберём iPhone, MacBook или AirPods, наклеим стекло, перенесём данные
+                        и всё настроим прямо в магазине. Телефоны чиним здесь же.
                     </p>
 
-                    <div class="hero__facts">
-                        <p><strong>5,0</strong> на Яндекс Картах — 58 оценок</p>
-                        <p><strong>до 21:00</strong> принимаем и консультируем</p>
+                    <div class="hero__actions">
+                        <a class="btn" href="#request">Узнать цену</a>
+                        <a class="btn btn--soft" href="#request" data-repair>Записаться на ремонт</a>
                     </div>
+
+                    <dl class="hero__facts">
+                        <div>
+                            <dt>5,0</dt>
+                            <dd>рейтинг на Яндекс Картах, 58 оценок</dd>
+                        </div>
+                        <div>
+                            <dt>до 21:00</dt>
+                            <dd>консультируем и принимаем технику</dd>
+                        </div>
+                    </dl>
                 </div>
 
+                <figure class="hero__photo">
+                    <img src="img/camera.jpg" width="1280" height="960"
+                         alt="Камера iPhone крупным планом на тёмном фоне">
+                </figure>
+            </div>
+        </section>
+
+        <!-- Техника -->
+        <section class="section" id="tech">
+            <div class="wrap">
+                <div class="section__head">
+                    <h2 class="section__title">Что есть в магазине</h2>
+                    <p class="section__lead">
+                        Цены меняются почти каждую неделю, поэтому мы их не публикуем.
+                        Нажмите «Узнать цену» — модель сама подставится в заявку.
+                    </p>
+                </div>
+
+                <ul class="catalog">
+                    <li class="catalog__item">
+                        <img class="catalog__img" src="img/iphone-hand.jpg" width="960" height="1280" loading="lazy" alt="iPhone в руке">
+                        <h3 class="catalog__name">iPhone</h3>
+                        <p class="catalog__desc">Актуальные модели и разные объёмы памяти. Наклеим стекло и перенесём данные со старого телефона.</p>
+                        <button class="link-btn" type="button" data-pick="iPhone">Узнать цену</button>
+                    </li>
+                    <li class="catalog__item">
+                        <img class="catalog__img" src="img/macbook.jpg" width="1280" height="847" loading="lazy" alt="MacBook, iPad и iPhone на белом столе">
+                        <h3 class="catalog__name">MacBook</h3>
+                        <p class="catalog__desc">MacBook Pro 13 и 16. Включим, проверим и установим нужные программы.</p>
+                        <button class="link-btn" type="button" data-pick="MacBook">Узнать цену</button>
+                    </li>
+                    <li class="catalog__item">
+                        <img class="catalog__img" src="img/airpods.jpg" width="1280" height="854" loading="lazy" alt="AirPods и iPhone на клавиатуре">
+                        <h3 class="catalog__name">AirPods</h3>
+                        <p class="catalog__desc">AirPods 2 и другие модели. Подключим к телефону ещё на кассе.</p>
+                        <button class="link-btn" type="button" data-pick="AirPods">Узнать цену</button>
+                    </li>
+                    <li class="catalog__item">
+                        <img class="catalog__img" src="img/accessories.jpg" width="960" height="1280" loading="lazy" alt="Чехлы, зарядки и MagSafe в коробках">
+                        <h3 class="catalog__name">Аксессуары</h3>
+                        <p class="catalog__desc">Чехлы, защитные стёкла и плёнки, зарядки и кабели.</p>
+                        <button class="link-btn" type="button" data-pick="Аксессуары">Узнать цену</button>
+                    </li>
+                </ul>
+
+                <p class="catalog__more">
+                    Ещё есть смартфоны Samsung, Xiaomi и Huawei.
+                    <button class="link-btn" type="button" data-pick="Смартфон Samsung, Xiaomi или Huawei">Спросить про Android</button>
+                </p>
+            </div>
+        </section>
+
+        <!-- Заявка -->
+        <section class="section section--tint" id="request-section">
+            <div class="wrap request-wrap">
+                <figure class="request-photo">
+                    <img src="img/counter.jpg" width="960" height="1280" loading="lazy"
+                         alt="Стойка консультанта на фоне деревянной стены с надписью Apple Mind">
+                </figure>
+
                 <div class="request" id="request">
+                    <h2 class="request__title">Узнать цену или записаться на ремонт</h2>
+                    <p class="request__lead">Оставьте телефон — перезвоним и ответим на вопросы.</p>
+
                     <div class="request__tabs" role="tablist" aria-label="Тип заявки">
                         <button class="request__tab is-active" type="button" role="tab" aria-selected="true" data-mode="buy">Купить</button>
                         <button class="request__tab" type="button" role="tab" aria-selected="false" data-mode="repair">Починить</button>
@@ -120,8 +196,8 @@
                         <button class="btn btn--full" type="submit" data-label-buy="Узнать цену" data-label-repair="Записаться на ремонт">Узнать цену</button>
 
                         <p class="form__note">
-                            Перезвоним и назовём цену. Как мы обращаемся с данными —
-                            в <a href="privacy.html" target="_blank">политике конфиденциальности</a>.
+                            Как мы обращаемся с данными — в
+                            <a href="privacy.html" target="_blank">политике конфиденциальности</a>.
                         </p>
                     </form>
 
@@ -134,69 +210,8 @@
             </div>
         </section>
 
-        <!-- Техника -->
-        <section class="section" id="tech">
-            <div class="wrap">
-                <div class="section__head">
-                    <h2 class="section__title">Что есть в магазине</h2>
-                    <p class="section__lead">
-                        Цены меняются почти каждую неделю, поэтому мы не держим их на сайте.
-                        Нажмите «Узнать цену» — модель подставится в заявку.
-                    </p>
-                </div>
-
-                <ul class="catalog">
-                    <li class="catalog__item">
-                        <div>
-                            <h3 class="catalog__name">iPhone</h3>
-                            <p class="catalog__desc">Актуальные модели и разные объёмы памяти. При покупке наклеим защитное стекло и поможем перенести данные со старого телефона.</p>
-                        </div>
-                        <button class="btn btn--ghost" type="button" data-pick="iPhone">Узнать цену</button>
-                    </li>
-                    <li class="catalog__item">
-                        <div>
-                            <h3 class="catalog__name">MacBook</h3>
-                            <p class="catalog__desc">MacBook Pro 13 и MacBook Pro 16. Включим, проверим и установим нужные программы.</p>
-                        </div>
-                        <button class="btn btn--ghost" type="button" data-pick="MacBook">Узнать цену</button>
-                    </li>
-                    <li class="catalog__item">
-                        <div>
-                            <h3 class="catalog__name">AirPods</h3>
-                            <p class="catalog__desc">AirPods 2 и другие модели. Подключим к телефону ещё на кассе.</p>
-                        </div>
-                        <button class="btn btn--ghost" type="button" data-pick="AirPods">Узнать цену</button>
-                    </li>
-                    <li class="catalog__item">
-                        <div>
-                            <h3 class="catalog__name">Samsung, Xiaomi, Huawei</h3>
-                            <p class="catalog__desc">Смартфоны на Android, если iPhone — не ваше.</p>
-                        </div>
-                        <button class="btn btn--ghost" type="button" data-pick="Смартфон Samsung, Xiaomi или Huawei">Узнать цену</button>
-                    </li>
-                    <li class="catalog__item">
-                        <div>
-                            <h3 class="catalog__name">Аксессуары</h3>
-                            <p class="catalog__desc">Чехлы, защитные стёкла и плёнки, зарядки и кабели.</p>
-                        </div>
-                        <button class="btn btn--ghost" type="button" data-pick="Аксессуары">Узнать цену</button>
-                    </li>
-                </ul>
-
-                <figure class="ph ph--wide">
-                    <div class="ph__box">
-                        <span class="ph__tag">Фото</span>
-                        <p class="ph__text">
-                            Шоу-рум магазина: витрина с iPhone и MacBook, тёплый свет, в кадре
-                            стойка консультанта. Горизонтальный кадр 16:9, без людей или со спины.
-                        </p>
-                    </div>
-                </figure>
-            </div>
-        </section>
-
         <!-- Ремонт и сервис -->
-        <section class="section section--alt" id="service">
+        <section class="section" id="service">
             <div class="wrap service">
                 <div class="service__text">
                     <h2 class="section__title">Ремонт и обслуживание</h2>
@@ -231,20 +246,15 @@
                     <button class="btn" type="button" data-repair>Записаться на ремонт</button>
                 </div>
 
-                <figure class="ph ph--tall">
-                    <div class="ph__box">
-                        <span class="ph__tag">Фото</span>
-                        <p class="ph__text">
-                            Рабочее место мастера крупным планом: открытый iPhone, пинцет, лампа-лупа.
-                            Вертикальный кадр 3:4.
-                        </p>
-                    </div>
+                <figure class="service__photo">
+                    <img src="img/interior.jpg" width="960" height="1280" loading="lazy"
+                         alt="Зал магазина Apple Mind: витрина с iPhone на деревянной стойке и большие окна">
                 </figure>
             </div>
         </section>
 
         <!-- Оплата и доставка -->
-        <section class="section" id="pay">
+        <section class="section section--tint" id="pay">
             <div class="wrap">
                 <h2 class="section__title">Оплата и доставка</h2>
 
@@ -275,12 +285,13 @@
         </section>
 
         <!-- Отзывы -->
-        <section class="section section--alt" id="reviews">
+        <section class="section" id="reviews">
             <div class="wrap reviews">
                 <div class="reviews__score">
                     <p class="reviews__num">5,0</p>
-                    <p class="reviews__meta">58 оценок и 47 отзывов<br>на Яндекс Картах</p>
-                    <a class="link-btn" href="https://yandex.ru/profile/165393138128" target="_blank" rel="noopener">Читать все отзывы</a>
+                    <p class="reviews__stars" aria-hidden="true">★★★★★</p>
+                    <p class="reviews__meta">58 оценок и 47 отзывов на Яндекс Картах</p>
+                    <a class="link-btn" href="https://yandex.ru/maps/org/165393138128/reviews/" target="_blank" rel="noopener">Читать все отзывы</a>
                 </div>
 
                 <div class="reviews__body">
@@ -298,10 +309,15 @@
         </section>
 
         <!-- Контакты -->
-        <section class="section" id="contacts">
+        <section class="section section--tint" id="contacts">
             <div class="wrap contacts">
                 <div class="contacts__info">
                     <h2 class="section__title">Как нас найти</h2>
+
+                    <figure class="contacts__photo">
+                        <img src="img/facade.jpg" width="960" height="720" loading="lazy"
+                             alt="Вход в магазин Apple Mind с синей вывеской на проспекте Ленина">
+                    </figure>
 
                     <dl class="contacts__list">
                         <div>
@@ -361,7 +377,7 @@
 
     <footer class="footer">
         <div class="wrap footer__inner">
-            <p>Apple Mind, Обнинск, проспект Ленина, 150</p>
+            <p class="footer__name">Apple Mind, Обнинск, проспект Ленина, 150</p>
             <p class="footer__small">
                 Apple, iPhone, MacBook и AirPods — товарные знаки Apple Inc. Магазин не является
                 официальным представительством Apple.
