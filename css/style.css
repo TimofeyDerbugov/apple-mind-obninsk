@@ -1783,3 +1783,14 @@ select.form__input {
         columns: 1;
     }
 }
+
+/* ---------- Плашка «концепт» ---------- */
+
+.demo-bar {
+    padding: 8px 20px;
+    background: var(--ink-main);
+    color: var(--bg, #000);
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+}
