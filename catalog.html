@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Каталог и цены — Apple Mind, Обнинск</title>
+    <meta name="description" content="Каталог Apple Mind: iPhone, MacBook, iPad, Apple Watch, AirPods, смартфоны Samsung, Xiaomi, Huawei и аксессуары. Ориентировочные цены, заказ с сайта.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="canonical" href="https://timofeyderbugov.github.io/apple-mind-obninsk/catalog.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Каталог и цены — Apple Mind, Обнинск">
+    <meta property="og:description" content="iPhone, MacBook, iPad, Apple Watch, AirPods и Android-смартфоны с ориентировочными ценами.">
+    <meta property="og:url" content="https://timofeyderbugov.github.io/apple-mind-obninsk/catalog.html">
+    <meta property="og:image" content="https://timofeyderbugov.github.io/apple-mind-obninsk/img/camera.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="wrap header__inner">
+            <a class="logo" href="index.html">Apple Mind</a>
+
+            <nav class="nav" aria-label="Разделы сайта">
+                <a href="catalog.html" aria-current="page">Каталог</a>
+                <a href="index.html#service">Ремонт</a>
+                <a href="index.html#pay">Оплата и доставка</a>
+                <a href="index.html#reviews">Отзывы</a>
+                <a href="index.html#contacts">Контакты</a>
+            </nav>
+
+            <a class="header__phone" href="tel:+79109138877">+7 910 913-88-77</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="cat-hero">
+            <div class="wrap">
+                <a class="back-link" href="index.html">На главную</a>
+                <h1 class="cat-hero__title">Каталог</h1>
+                <p class="cat-hero__lead">
+                    Ориентировочные цены по рынку на ноябрь 2026. Цены на технику меняются
+                    почти каждую неделю, поэтому точную цену и наличие подтвердим по телефону.
+                </p>
+            </div>
+        </section>
+
+        <!-- Фильтры -->
+        <div class="cat-bar">
+            <div class="wrap cat-bar__inner">
+                <div class="cat-chips" role="group" aria-label="Разделы каталога" data-chips></div>
+
+                <div class="cat-tools">
+                    <label class="visually-hidden" for="cat-search">Поиск по каталогу</label>
+                    <input class="form__input cat-search" id="cat-search" type="search" placeholder="Поиск: например, Pro Max">
+
+                    <label class="visually-hidden" for="cat-sort">Сортировка</label>
+                    <select class="form__input cat-sort" id="cat-sort">
+                        <option value="default">По разделам</option>
+                        <option value="cheap">Сначала дешевле</option>
+                        <option value="expensive">Сначала дороже</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <section class="section cat-section">
+            <div class="wrap">
+                <p class="cat-count" data-count aria-live="polite"></p>
+
+                <ul class="cat-grid" data-grid></ul>
+
+                <div class="cat-empty" data-empty hidden>
+                    <p class="cat-empty__title">Ничего не нашлось</p>
+                    <p>Попробуйте другое название или оставьте заявку — подберём нужную модель.</p>
+                    <button class="btn" type="button" data-order="Подбор модели">Оставить заявку</button>
+                </div>
+
+                <div class="cat-note">
+                    <p class="cat-note__title">Не нашли нужную модель или объём памяти?</p>
+                    <p>Здесь только популярные версии. Спросите про другие цвета, объёмы памяти и модели.</p>
+                    <button class="btn btn--soft" type="button" data-order="Другая модель">Спросить про модель</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Окно заказа -->
+    <dialog class="order" id="order" aria-labelledby="order-title">
+        <div class="order__body">
+            <button class="order__close" type="button" data-close aria-label="Закрыть">×</button>
+
+            <form class="form" id="order-form" novalidate>
+                <h2 class="order__title" id="order-title">Заказать</h2>
+                <p class="order__product" data-product></p>
+                <p class="order__price" data-product-price></p>
+                <input type="hidden" name="product">
+
+                <div class="form__group">
+                    <label class="form__label" for="order-name">Имя</label>
+                    <input class="form__input" id="order-name" name="name" type="text" autocomplete="given-name" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="order-phone">Телефон</label>
+                    <input class="form__input" id="order-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7" required>
+                </div>
+
+                <fieldset class="form__group order__fieldset">
+                    <legend class="form__label">Как получить</legend>
+                    <div class="order__options">
+                        <label class="order__option">
+                            <input type="radio" name="delivery" value="Самовывоз" checked>
+                            <span>Заберу в магазине</span>
+                        </label>
+                        <label class="order__option">
+                            <input type="radio" name="delivery" value="Доставка">
+                            <span>Нужна доставка</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <label class="consent">
+                    <input type="checkbox" name="consent" value="yes">
+                    <span>Соглашаюсь на <a href="consent.html" target="_blank">обработку персональных данных</a></span>
+                </label>
+
+                <p class="form__error" role="alert" hidden></p>
+
+                <button class="btn btn--full" type="submit">Отправить заявку</button>
+
+                <p class="form__note">
+                    Перезвоним, подтвердим цену и наличие. Как мы обращаемся с данными — в
+                    <a href="privacy.html" target="_blank">политике конфиденциальности</a>.
+                </p>
+            </form>
+
+            <div class="order__done" hidden>
+                <p class="order__title">Заявка у нас</p>
+                <p>Перезвоним на <span data-done-phone></span>, подтвердим цену и наличие.</p>
+                <button class="btn" type="button" data-close>Хорошо</button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <p class="footer__name">Apple Mind, Обнинск, проспект Ленина, 150</p>
+            <p class="footer__small">
+                Apple, iPhone, MacBook, iPad, Apple Watch и AirPods — товарные знаки Apple Inc.
+                Магазин не является официальным представительством Apple. Цены в каталоге
+                ориентировочные и не являются публичной офертой.
+            </p>
+            <nav class="footer__legal" aria-label="Документы">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="consent.html">Согласие на обработку данных</a>
+                <a href="cookies.html">Политика cookie</a>
+                <a href="terms.html">Пользовательское соглашение</a>
+            </nav>
+            <!-- Реквизиты: заменить на настоящие данные владельца -->
+            <p class="footer__small">
+                ИП <span class="fill">Фамилия Имя Отчество</span>, ИНН <span class="fill">000000000000</span>,
+                ОГРНИП <span class="fill">000000000000000</span>
+            </p>
+            <p class="footer__small">© <span data-year>2026</span></p>
+        </div>
+    </footer>
+
+    <script src="js/cookies.js"></script>
+    <script src="js/catalog-data.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>
