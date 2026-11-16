@@ -84,6 +84,10 @@
 
         grid.innerHTML = items.map((item) =>
             '<li class="cat-item">' +
+                '<figure class="cat-item__photo">' +
+                    '<img src="' + item.img + '" alt="' + escapeHtml(item.name) + '" loading="lazy" width="480" height="600">' +
+                    (item.similar ? '<figcaption>фото похожей модели</figcaption>' : "") +
+                "</figure>" +
                 '<p class="cat-item__top">' +
                     '<span class="cat-item__cat">' + CATEGORIES[item.cat] + "</span>" +
                     (item.badge ? '<span class="cat-item__badge">' + escapeHtml(item.badge) + "</span>" : "") +
@@ -110,6 +114,19 @@
         state.sort = sort.value;
         renderGrid();
     });
+
+    /* ---------- Авторы фото ---------- */
+
+    const creditsBox = document.querySelector("[data-credits]");
+
+    if (creditsBox && typeof PHOTO_CREDITS !== "undefined") {
+        creditsBox.innerHTML = Object.values(PHOTO_CREDITS).map((c) =>
+            "<li>" +
+                '<a href="' + c.page + '" target="_blank" rel="noopener">' + escapeHtml(c.title) + "</a>" +
+                " — " + escapeHtml(c.author) + ", " + escapeHtml(c.license) +
+            "</li>"
+        ).join("");
+    }
 
     /* переход по ссылке вида catalog.html#iphone */
     window.addEventListener("hashchange", () => {

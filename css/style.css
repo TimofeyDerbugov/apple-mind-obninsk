@@ -1701,3 +1701,85 @@ select.form__input {
 .section__aside .btn {
     margin-top: 20px;
 }
+
+/* ---------- Каталог: фото ---------- */
+
+.cat-item__photo {
+    position: relative;
+    margin: -22px -22px 18px;
+    overflow: hidden;
+    background: #11152a;
+}
+
+.cat-item__photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.cat-item:hover .cat-item__photo img {
+    transform: scale(1.04);
+}
+
+.cat-item__photo figcaption {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 2px 8px;
+    border-radius: var(--radius);
+    background: rgba(8, 11, 22, 0.8);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.cat-item__name {
+    margin-top: 16px;
+}
+
+/* ---------- Авторы фото ---------- */
+
+.cat-credits {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.cat-credits summary {
+    color: var(--ink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cat-credits p {
+    max-width: 52em;
+    margin: 12px 0;
+}
+
+.cat-credits__list {
+    columns: 2;
+    column-gap: 40px;
+}
+
+.cat-credits__list li {
+    padding: 3px 0;
+    break-inside: avoid;
+}
+
+.cat-credits__list a {
+    color: var(--blue-hover);
+}
+
+@media (max-width: 600px) {
+    .cat-item__photo {
+        margin: -16px -14px 14px;
+    }
+
+    .cat-item__name {
+        margin-top: 10px;
+    }
+
+    .cat-credits__list {
+        columns: 1;
+    }
+}
