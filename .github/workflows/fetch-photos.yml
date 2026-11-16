@@ -1,4 +1,4 @@
-# Скачивает фото из img/sources.txt, сжимает их и кладёт в img/.
+# Скачивает фото из img/sources.txt, сжимает их и кладёт в img/ (подпапки создаются сами).
 # Запускается сам, когда меняется sources.txt, или вручную во вкладке Actions.
 name: Fetch photos
 
@@ -26,7 +26,8 @@ jobs:
               echo "skip $name"
               continue
             fi
-            curl -fsSL -A "Mozilla/5.0" "$url" -o "/tmp/$name"
+            mkdir -p "$(dirname "img/$name")" "$(dirname "/tmp/$name")"
+            curl -fsSL -A "AppleMindCatalog/1.0 (github.com/TimofeyDerbugov/apple-mind-obninsk)" "$url" -o "/tmp/$name"
             convert "/tmp/$name" -auto-orient -strip -resize '1600x1600>' -quality 80 -interlace Plane "img/$name"
             echo "ok $name $(du -h img/$name | cut -f1)"
           done
