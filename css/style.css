@@ -154,6 +154,7 @@ select {
     background: var(--green);
     color: var(--white);
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.15s;
 }
